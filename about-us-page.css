@@ -1,0 +1,210 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.wrap{
+    margin: 0px auto;
+    max-width: 1200px;
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* header section */
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 30px;
+    /* background-color: red; */
+}
+.nav-bar ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+li{
+    list-style: none;
+}
+li a{
+    text-decoration: none;
+    color: black;
+}
+button{
+    padding: 5px;
+    border: 1px solid blue;
+    cursor: pointer;
+}
+button:hover{
+    background-color: blue;
+    color: white;
+}
+
+/* About us section  */
+.about-color{
+background-color: rgba(210, 247, 247, 0.58);
+}
+.about-micro{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px 20px;
+    align-items: center;
+}
+.about-micro img{
+    max-width: 100%;
+    width: 400px;
+}
+.our-story{
+    padding: 40px 20px;
+}
+.story{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 90px;
+    margin-bottom: 20px;
+}
+.story img{
+    max-width: 100%;
+    width: 200px;
+}
+.story p{
+    line-height: 1.5;
+    margin-top: 8px;
+}
+.mission{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* padding: 0px 25px; */
+    gap: 20px;
+}
+.our-mission{
+    display: flex;
+    gap: 10px;
+    background-color: rgba(210, 247, 247, 0.58);
+    padding: 20px;
+}
+.our-mission i{
+    color: blue;
+}
+.our-mission p{
+    line-height: 1.5;
+    margin-top: 8px;   
+}
+.core-value h3{
+  padding-top: 8px;
+}
+.value{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+.value i{
+    color: blue;
+    padding: 10px 0;
+}
+
+/* footer section  */
+.bg-color{
+    background-color: rgb(1, 1, 44);
+   color: white;
+}
+.foot-list li a{
+    color: white;
+}
+.foot-list li{
+    padding: 10px 50px;
+}
+.foot-services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.foot-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 50px;
+
+}
+.fot{
+    text-align: center;
+    border-top: 1px solid rgba(240, 235, 235, 0.342);
+}
+.fot p{
+    padding: 20px;
+}
+
+@media (max-width:768px){
+    .wrap{
+        padding: 0 15px;
+    }
+     .foot-container{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .foot-services{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .foot-list{
+        padding: 8px 0;
+    }
+    .foot-name{
+        text-align: center;
+    }
+    .fot p{
+        font-size: 14px;
+    }
+    header{
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .nav-bar ul{
+        justify-content: center;
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .about-micro{
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 20px;
+    }
+    .about-micro img{
+        width: 100%;
+        max-width: 300px;
+    }
+    .story{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .story img{
+        width: 100%;
+        max-width: 300px;
+    }
+    .mission{
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .core-value h3{
+        text-align: center;
+        gap: 25px;
+    }
+    .value{
+        justify-content: center;
+        gap: 25px;
+    }
+    .value > div{
+        flex: 1 1 40%;
+    }
+}

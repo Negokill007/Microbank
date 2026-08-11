@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <section class="dashboard-container">
+
+            <!-- sidebar  -->
+            <div class="sidebar" id="sideBar">
+                <div class="flut">
+                    <h2>Microbank</h2>
+                    <div class="close" onclick="sideBar.style.transform = 'translateX(-100%)'">&times;</div>
+                </div>
+                <ul>
+                    <li><i class="fa-solid fa-table-columns"></i>Dashboard</li>
+                    <li><i class="fa-solid fa-wallet"></i>Accounts</li>
+                    <li><i class="fa-solid fa-arrow-right-arrow-left"></i>Transfer Money</li>
+                    <li><i class="fa-solid fa-file-invoice-dollar"></i>Pay Bills</li>
+                    <li><i class="fa-solid fa-credit-card"></i>Cards</li>
+                    <li><i class="fa-solid fa-clock-rotate-left"></i>Transaction</li>
+                    <li><i class="fa-solid fa-piggy-bank"></i>Savings</li>
+                    <li><i class="fa-solid fa-gear"></i>Settings</li>
+                </ul>
+            </div>
+
+            <!-- main content  -->
+            <div class="dashboard-content">
+
+                <!-- top bar -->
+                <div class="top-bar">
+                    <div class="burger"
+                        onclick="sideBar.style.display = 'block'; sideBar.style.transform ='translateX(0%)'">&#9776;
+                    </div>
+                    <h2>Dashboard</h2>
+                    <div class="profile">
+                        <i class="fa-regular fa-bell"></i>
+                        <img src="images/man 1.jpg" alt="Profile">
+                    </div>
+                </div>
+
+                <!-- balance card -->
+                <div class="card-grid">
+                    <div class="dash-card">
+                        <h4>Current Balance</h4>
+                        <h3>#1,250,000</h3>
+                    </div>
+                    <div class="dash-card">
+                        <h4>Savings Balance</h4>
+                        <h3>#500,000</h3>
+                    </div>
+                    <div class="dash-card">
+                        <h4>Loan Balance</h4>
+                        <h3>#250,000</h3>
+                    </div>
+                    <div class="dash-card">
+                        <h4>Credit Limit</h4>
+                        <h3>#750,000</h3>
+                    </div>
+                </div>
+
+                <!-- Transaction table  -->
+                <div class="transaction">
+                    <h3>Recent Transaction</h3>
+
+                    <table>
+                        <tr>
+                            <th>Date</th>
+                            <th>Descriptions</th>
+                            <th>Type</th>
+                            <th>Amount</th>
+                            <th>Statue</th>
+                        </tr>
+                        <tr>
+                            <td>Jun 15</td>
+                            <td>Transfer Received</td>
+                            <td>Credit</td>
+                            <td>#50,000</td>
+                            <td>Successful</td>
+                        </tr>
+                        <tr>
+                            <td>Jun 14</td>
+                            <td>Electricity Bills</td>
+                            <td>Debit</td>
+                            <td>#15,000</td>
+                            <td>Successful</td>
+                        </tr>
+                        <tr>
+                            <td>Jun 13</td>
+                            <td>ATM withdrawal</td>
+                            <td>Debit</td>
+                            <td>#20,000</td>
+                            <td>Successful</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- bottom section  -->
+                <div class="bottom-grid">
+
+                    <div class="widget">
+                        <h3>Spending Overview</h3>
+                        <div class="chart-placeholder">
+                            Chart Here
+                        </div>
+                    </div>
+
+
+                    <div class="widget">
+                        <h3>Quick Actions</h3>
+                        <div class="action">
+                            <div>
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                <p>Transfer</p>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-file-invoice-dollar"></i>
+                                <p>Pay Bills</p>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                                <p>Airtime</p>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-ellipsis"></i>
+                                <p>More</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script>
+    const sideBar = document.querySelector('#sideBar')
+    window.addEventListener('resize', (e) => {
+        if (window.innerWidth >= 900) {
+        sideBar.style.transform = 'translateX(0px)'
+    }
+    else {
+        sideBar.style.transform = 'translateX(-100%)'
+    }
+    })
+    
+</script>
+
+</html>

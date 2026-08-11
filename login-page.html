@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="wrap">
+
+        <!-- Login section  -->
+        <section class="login">
+            <div class="container">
+                <div class="image">
+                    <h1>Welcome Back!</h1>
+                    <p>Log in to your account <br>to continue banking <br> with ease</p>
+                </div>
+            </div>
+            <div class="form">
+                <div class="form-container">
+                    <div form-text>
+                        <h1>Welcome Back</h1>
+                        <p>Please login to your account</p>
+                    </div>
+                    <div class="login-container">
+                        <div>
+                            <p><b>Email Address</b></p>
+                            <div class="icon">
+                                <i class="fa-solid fa-user"></i> &nbsp;
+                                <input placeholder="Enter your email" type="email">
+                            </div>
+
+                        </div>
+                        <div style="margin-top: 25px;">
+                            <p><b>Password</b></p>
+                            <div class="icon">
+                                <i class="fa-solid fa-user"></i> &nbsp;
+                                <input id="pass" placeholder="Enter your Passwprd" type="password">
+                                <i id="eyetoggle" class="fa-solid fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="me">
+                        <div class="me-too">
+                            <div>
+                                <input type="checkbox">
+                            </div>
+                            <div style="padding-top: 14px;">
+                                <p><b>Remember Me</b></p>
+                            </div>
+                        </div>
+                        <div style="padding-top: 14px;">
+                            <p><b><a href="">Forget Password?</a></b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="but">
+                    <a href="dashboard.html"><button>Login</button></a>
+                </div>
+                <div class="account">
+                    <p><b>Don't have an account? &nbsp; <a href="Register-page.html">Create Account</a></b></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const eye = document.querySelector('#eyetoggle')
+        const password = document.querySelector('#pass')
+
+        let doSomething = true
+
+        eye.addEventListener('click', (e) =>{
+            if(doSomething === true){
+                password.type = 'text'
+                eye.classList.replace('fa-eye','fa-eye-slash')
+                doSomething = false
+            }
+
+            else{
+                password.type = 'password'
+                eye.classList.replace('fa-eye-slash', 'fa-eye')
+                doSomething = true
+            }
+        })
+        
+    </script>
+</body>
+
+</html>
